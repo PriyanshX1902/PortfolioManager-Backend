@@ -50,7 +50,8 @@ app.use(passportConfig.initialize());
 
 // Routing
 app.use("/", (req, res)=>{
-   console.log("Hello")
+   console.log("Hello");
+   res.write("Hello this is backend!");
 });
 app.use("/auth", require("./routes/authRoutes"));
 app.use("/api", require("./routes/apiRoutes"));
